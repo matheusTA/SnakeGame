@@ -1,3 +1,22 @@
+#fundo{
+
+}
+#titulo{
+    background-color: black;
+    text-align:center;
+    color: white;
+}
+#redeSocial{
+    background-color: black;
+}
 #game{
     text-align:center;
+    vertical-align: middle;
+}
+#rodape{
+    position: absolute;
+	bottom: 0;
+    background: black;
+    color: white;
+    text-align: center;
 }

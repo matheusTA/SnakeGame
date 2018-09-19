@@ -35,13 +35,13 @@ window.onload = function(){
             pontoY = 0;
         }
 
-        context.fillStyle = "black";
+        context.fillStyle = "SlateGray";
         context.fillRect(0,0, stage.width, stage.height);
 
-        context.fillStyle = "red";
+        context.fillStyle = "#FF0000";
         context.fillRect(posicaoMacaX*tamanhoTabuleiro, posicaoMacaY*tamanhoTabuleiro, tamanhoTabuleiro,tamanhoTabuleiro);
 
-        context.fillStyle = "gray";
+        context.fillStyle = "#006400";
         for (var i = 0; i < rastro.length; i++) {
             context.fillRect(rastro[i].x*tamanhoTabuleiro, rastro[i].y*tamanhoTabuleiro, tamanhoTabuleiro-1,tamanhoTabuleiro-1);
             if (rastro[i].x == pontoX && rastro[i].y == pontoY)
