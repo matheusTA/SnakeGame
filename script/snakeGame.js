@@ -11,13 +11,13 @@ window.onload = function(){
     var velocidadeY = 0;
     var pontoX = 10;
     var pontoY = 15;
-    var tamanhoTabuleiro = 30;
+    var tamanhoTabuleiro = 20;
     var qntPecas = 20;
     var posicaoMacaX = 15; 
     var posicaoMacaY = 15;
 
     var rastro = [];
-    var tail = 5;
+    var cauda = 5;
 
     function game(){
         pontoX += velocidadeX;
@@ -47,17 +47,17 @@ window.onload = function(){
             if (rastro[i].x == pontoX && rastro[i].y == pontoY)
             {
                 velocidadeX = velocidadeY=0;
-                tail = 5;
+                cauda = 5;
             }
         }
 
         rastro.push({x:pontoX,y:pontoY })
-        while (rastro.length > tail) {
+        while (rastro.length > cauda) {
             rastro.shift();
         }
 
         if (posicaoMacaX == pontoX && posicaoMacaY == pontoY){
-            tail++;
+            cauda++;
             posicaoMacaX = Math.floor(Math.random()*qntPecas);
             posicaoMacaY = Math.floor(Math.random()*qntPecas);
         }
