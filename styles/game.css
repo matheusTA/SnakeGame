@@ -1,22 +1,38 @@
+body{
+    background-image: url("https://dumielauxepices.net/sites/default/files/drawn-night-sky-sky-wallpaper-557269-1896294.jpg");
+    margin: 0;
+}
 #fundo{
 
 }
 #titulo{
-    background-color: black;
+    font-size: 25px;
     text-align:center;
-    color: white;
+    color: #FFFF;
 }
 #redeSocial{
-    background-color: black;
+    text-align:center;
+}
+#redeSocial aside ul li{
+    display: inline-block;
 }
 #game{
     text-align:center;
     vertical-align: middle;
 }
+#stage{
+    border:solid 1px;
+    border-color: #ffff;
+}
 #rodape{
-    position: absolute;
-	bottom: 0;
-    background: black;
-    color: white;
-    text-align: center;
+   background-color: #151515;
+   width: 100%;
+   position: absolute;
+   bottom:0;
+   
+}
+#textoRodaPe{
+    font-size: 15px;
+    text-align:center;
+    color: #fff;
 }
