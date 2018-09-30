@@ -22,18 +22,7 @@ window.onload = function(){
         pontoX += velocidadeX;
         pontoY += velocidadeY;
 
-        if (pontoX < 0) {
-            pontoX = qntPecas-1;
-        }
-        if (pontoX > qntPecas-1) {
-            pontoX = 0;
-        }
-        if (pontoY < 0) {
-            pontoY = qntPecas-1;
-        }
-        if (pontoY > qntPecas-1) {
-            pontoY = 0;
-        }
+        
 
         context.fillStyle = "#000000"; //cor do tabuleiro
         context.fillRect(0,0, stage.width, stage.height);
@@ -48,6 +37,34 @@ window.onload = function(){
             {
                 velocidadeX = velocidadeY=0;
                 cauda = 5;
+            }
+            if (pontoX < -1) {
+                alert("VOCÊ PERDEU!  TENTE NOVAMENTE");
+                velocidadeX = velocidadeY=0;
+                cauda = 5;
+                context.fillRect(rastro[1].x*tamanhoTabuleiro, rastro[1].y*tamanhoTabuleiro, tamanhoTabuleiro-1,tamanhoTabuleiro-1);
+                pontoX = 0;
+            }
+            if (pontoX > qntPecas) {
+                alert("VOCÊ PERDEU! TENTE NOVAMENTE");
+                velocidadeX = velocidadeY=0;
+                cauda = 5;
+                context.fillRect(rastro[1].x*tamanhoTabuleiro, rastro[1].y*tamanhoTabuleiro, tamanhoTabuleiro-1,tamanhoTabuleiro-1);
+                pontoX = qntPecas-1;
+            }
+            if (pontoY < -1) {
+                alert("VOCÊ PERDEU! TENTE NOVAMENTE");
+                velocidadeX = velocidadeY=0;
+                cauda = 5;
+                context.fillRect(rastro[1].x*tamanhoTabuleiro, rastro[1].y*tamanhoTabuleiro, tamanhoTabuleiro-1,tamanhoTabuleiro-1);
+                pontoY = 0;
+            }
+            if (pontoY > qntPecas) {
+                alert("VOCÊ PERDEU! TENTE NOVAMENTE");
+                velocidadeX = velocidadeY=0;
+                cauda = 5;
+                context.fillRect(rastro[1].x*tamanhoTabuleiro, rastro[1].y*tamanhoTabuleiro, tamanhoTabuleiro-1,tamanhoTabuleiro-1);
+                pontoY = qntPecas-1;   
             }
         }
 
