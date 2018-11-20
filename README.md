@@ -1,5 +1,5 @@
 # SnakeGame
-    .https://matheusta.github.io/SnakeGame/
+    https://matheusta.github.io/SnakeGame/
 ## Jogo feito em:
     
     .JAVASCRIPT
